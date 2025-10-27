@@ -1,0 +1,86 @@
+<!doctype html><html lang="vi"><head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>🌿 ZOOM ĐẶC BIỆT: Diệp Lục – “Máu Xanh” Của Thiên Nhiên: Ai Là Người Nên Sử Dụng?</title>
+<meta name="description" content="🌿 ZOOM ĐẶC BIỆT: Diệp Lục – “Máu Xanh” Của Thiên Nhiên: Ai Là Người Nên Sử Dụng?">
+<meta property="og:url" content="https://th-health.info/news-20251027-085544.html">
+<meta property="og:image" content="https://th-health.info/images/tmp-1761555342319.jpg?v=1761555344926">
+<meta name="twitter:card" content="summary_large_image">
+<style>
+  :root{--pri:#0a7cff}
+  body{font-family:system-ui,Arial;margin:0;background:#f6f7f9;color:#111}
+  .wrap{max-width:880px;margin:0 auto;padding:20px}
+  .card{background:#fff;border-radius:16px;padding:20px;box-shadow:0 8px 30px rgba(0,0,0,.06)}
+  .hero{width:100%;height:auto;border-radius:12px}
+  .form{margin-top:16px;padding:16px;border:1px solid #eee;border-radius:12px;background:#fcfcfc}
+  .row{display:flex;gap:8px;align-items:center}
+  .in{flex:1;padding:12px 14px;border:1px solid #d0d4d9;border-radius:10px;font-size:16px}
+  .btn{padding:12px 16px;border:0;border-radius:10px;background:var(--pri);color:#fff;font-weight:600;cursor:pointer}
+  .btn[disabled]{opacity:.6;cursor:not-allowed}
+  .hint{font-size:13px;color:#666;margin-top:8px}
+  .ok{color:#107c10}.err{color:#b00020}
+  .title{margin:18px 0 6px;font-size:22px;font-weight:700;line-height:1.35}
+  .content{margin-top:6px;white-space:pre-line;line-height:1.5}
+</style></head><body>
+<div class="wrap"><div class="card">
+  <!-- 1) Ảnh -->
+  <img class="hero" src="https://th-health.info/images/tmp-1761555342319.jpg?v=1761555344926" alt="🌿 ZOOM ĐẶC BIỆT: Diệp Lục – “Máu Xanh” Của Thiên Nhiên: Ai Là Người Nên Sử Dụng?">
+
+  <!-- 2) Nút/ Form đăng ký -->
+  <div class="form" id="reg">
+    <div class="row">
+      <input id="zalo" class="in" inputmode="numeric" autocomplete="tel"
+             placeholder="Nhập số Zalo của bạn" />
+      <button id="submit" class="btn">Đăng ký</button>
+    </div>
+    <div class="hint">🔐 Đảm bảo nhập đúng số Zalo để hệ thống xác nhận và gửi nhắc lịch cho bạn.</div>
+    <div id="msg" class="hint"></div>
+  </div>
+
+  <!-- 3) Tiêu đề + Nội dung -->
+  <div class="title">🌿 ZOOM ĐẶC BIỆT: Diệp Lục – “Máu Xanh” Của Thiên Nhiên: Ai Là Người Nên Sử Dụng?</div>
+  <div class="content">🌿 ZOOM ĐẶC BIỆT: Diệp Lục – “Máu Xanh” Của Thiên Nhiên: Ai Là Người Nên Sử Dụng?
+📅 16h30 - 18h30, ngày 27/10/2025
+📍 Phát trực tiếp tại: ID zoom: 498 262 4412 | Mật khẩu: 6868
+👉 Bạn có biết: Diệp lục (chlorophyll) có cấu trúc gần giống hemoglobin – huyết sắc tố trong máu người?
+❗  Đó là lý do vì sao diệp lục được gọi là “máu xanh của thiên nhiên”, giúp thanh lọc cơ thể, tăng hồng cầu, làm sạch máu và hỗ trợ miễn dịch.
+Trong buổi livestream này, bạn sẽ:
+✅ Hiểu rõ lợi ích khoa học của diệp lục
+✅ Biết ai nên sử dụng diệp lục: dân văn phòng, người thường xuyên mệt mỏi, người ít ăn rau, trẻ nhỏ, người lớn tuổi…
+✅ Giao lưu với Chuyên gia sản phẩm Lưu Phương, người tiên phong đưa diệp lục chất lượng cao đến gần hơn với cộng đồng
+📲 Theo dõi ngay hôm nay và đặt lịch tham gia lúc 12h00, ngày 24/10.
+💚 Cơ thể khỏe từ gốc – bắt đầu từ “máu xanh” diệp lục!</div>
+</div></div>
+
+<script>
+(function(){
+  const EP = "https://loctruong.pro/webhook/zoom-register";
+  const meta = { slug: "news-20251027-085544", title: "🌿 ZOOM ĐẶC BIỆT: Diệp Lục – “Máu Xanh” Của Thiên Nhiên: Ai Là Người Nên Sử Dụng?", at: new Date().toISOString() };
+
+  const $ = id => document.getElementById(id);
+  const zaloEl = $('zalo');
+  const btn = $('submit');
+  const msg = $('msg');
+
+  function onlyDigits(s){ return (s||'').replace(/\D+/g,''); }
+  function show(text, cls){ msg.textContent = text; msg.className = 'hint ' + (cls||''); }
+
+  btn.addEventListener('click', async (e)=>{
+    e.preventDefault();
+    let zalo = onlyDigits(zaloEl.value);
+    if(!/^\d{9,12}$/.test(zalo)){ show('Số Zalo không hợp lệ. Vui lòng nhập 9–12 số.', 'err'); return; }
+    btn.disabled = true; show('Đang gửi...', '');
+    try{
+      const res = await fetch(EP, {
+        method:'POST',
+        headers:{'Content-Type':'application/json'},
+        body: JSON.stringify({ zalo, ...meta, ua: navigator.userAgent })
+      });
+      const data = await res.json().catch(()=>({}));
+      if(res.ok && data && data.ok!==false){ show('Đăng ký thành công. Cảm ơn bạn!', 'ok'); zaloEl.value=''; }
+      else{ show('Gửi thất bại. Vui lòng thử lại sau.', 'err'); }
+    }catch(_){ show('Lỗi mạng. Thử lại sau.', 'err'); }
+    finally{ btn.disabled = false; }
+  });
+})();
+</script>
+</body></html>
