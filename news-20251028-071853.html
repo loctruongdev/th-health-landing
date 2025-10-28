@@ -1,0 +1,86 @@
+<!doctype html><html lang="vi"><head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>💡 TEST CHĂM SÓC GAN & RUỘT KHỎE MẠNH – DỄ HƠN BẠN NGHĨ!</title>
+<meta name="description" content="💡 TEST CHĂM SÓC GAN & RUỘT KHỎE MẠNH – DỄ HƠN BẠN NGHĨ!">
+<meta property="og:url" content="https://th-health.info/news-20251028-071853.html">
+<meta property="og:image" content="https://th-health.info/images/tmp-1761635930566.jpg?v=1761635933110">
+<meta name="twitter:card" content="summary_large_image">
+<style>
+  :root{--pri:#0a7cff}
+  body{font-family:system-ui,Arial;margin:0;background:#f6f7f9;color:#111}
+  .wrap{max-width:880px;margin:0 auto;padding:20px}
+  .card{background:#fff;border-radius:16px;padding:20px;box-shadow:0 8px 30px rgba(0,0,0,.06)}
+  .hero{width:100%;height:auto;border-radius:12px}
+  .form{margin-top:16px;padding:16px;border:1px solid #eee;border-radius:12px;background:#fcfcfc}
+  .row{display:flex;gap:8px;align-items:center}
+  .in{flex:1;padding:12px 14px;border:1px solid #d0d4d9;border-radius:10px;font-size:16px}
+  .btn{padding:12px 16px;border:0;border-radius:10px;background:var(--pri);color:#fff;font-weight:600;cursor:pointer}
+  .btn[disabled]{opacity:.6;cursor:not-allowed}
+  .hint{font-size:13px;color:#666;margin-top:8px}
+  .ok{color:#107c10}.err{color:#b00020}
+  .title{margin:18px 0 6px;font-size:22px;font-weight:700;line-height:1.35}
+  .content{margin-top:6px;white-space:pre-line;line-height:1.5}
+</style></head><body>
+<div class="wrap"><div class="card">
+  <!-- 1) Ảnh -->
+  <img class="hero" src="https://th-health.info/images/tmp-1761635930566.jpg?v=1761635933110" alt="💡 TEST CHĂM SÓC GAN & RUỘT KHỎE MẠNH – DỄ HƠN BẠN NGHĨ!">
+
+  <!-- 2) Nút/ Form đăng ký -->
+  <div class="form" id="reg">
+    <div class="row">
+      <input id="zalo" class="in" inputmode="numeric" autocomplete="tel"
+             placeholder="Nhập số Zalo của bạn" />
+      <button id="submit" class="btn">Đăng ký</button>
+    </div>
+    <div class="hint">🔐 Đảm bảo nhập đúng số Zalo để hệ thống xác nhận và gửi nhắc lịch cho bạn.</div>
+    <div id="msg" class="hint"></div>
+  </div>
+
+  <!-- 3) Tiêu đề + Nội dung -->
+  <div class="title">💡 TEST CHĂM SÓC GAN & RUỘT KHỎE MẠNH – DỄ HƠN BẠN NGHĨ!</div>
+  <div class="content">💡 CHĂM SÓC GAN & RUỘT KHỎE MẠNH – DỄ HƠN BẠN NGHĨ!
+📅 Thời gian: 20h00 – 22h00 | Ngày 27/10/2025
+👉 Tham gia tại Droppii https://m.droppii.vn/xFFb/7shyrjfd
+Bạn có biết:
+✅ Gan là nhà máy thải độc lớn nhất cơ thể, xử lý trung bình 1.4 lít máu mỗi phút.
+✅ Ruột chứa đến 70% tế bào miễn dịch, ảnh hưởng trực tiếp đến trí não, làn da và năng lượng.
+✅ Mỗi năm, có hơn 2 triệu người mắc các vấn đề về gan và rối loạn tiêu hóa do lối sống thiếu kiểm soát.
+🎯 Vậy làm thế nào để bảo vệ gan – ruột đúng cách mà không phải kiêng khem cực đoan hay dùng thuốc dài ngày?
+🔥 Câu trả lời sẽ được bật mí trong buổi livestream đặc biệt: CHĂM SÓC GAN & RUỘT KHỎE MẠNH – DỄ HƠN BẠN NGHĨ!
+🎙️ Cùng Chuyên gia sản phẩm Lưu Phương phát triển các giải pháp chăm sóc sức khỏe tự nhiên.
+THỰC PHẨM NÀY KHÔNG PHẢI LÀ THUỐC VÀ KHÔNG CÓ TÁC DỤNG THAY THẾ THUỐC CHỮA BỆNH!</div>
+</div></div>
+
+<script>
+(function(){
+  const EP = "https://loctruong.pro/webhook/zoom-register";
+  const meta = { slug: "news-20251028-071853", title: "💡 TEST CHĂM SÓC GAN & RUỘT KHỎE MẠNH – DỄ HƠN BẠN NGHĨ!", at: new Date().toISOString() };
+
+  const $ = id => document.getElementById(id);
+  const zaloEl = $('zalo');
+  const btn = $('submit');
+  const msg = $('msg');
+
+  function onlyDigits(s){ return (s||'').replace(/\D+/g,''); }
+  function show(text, cls){ msg.textContent = text; msg.className = 'hint ' + (cls||''); }
+
+  btn.addEventListener('click', async (e)=>{
+    e.preventDefault();
+    let zalo = onlyDigits(zaloEl.value);
+    if(!/^\d{9,12}$/.test(zalo)){ show('Số Zalo không hợp lệ. Vui lòng nhập 9–12 số.', 'err'); return; }
+    btn.disabled = true; show('Đang gửi...', '');
+    try{
+      const res = await fetch(EP, {
+        method:'POST',
+        headers:{'Content-Type':'application/json'},
+        body: JSON.stringify({ zalo, ...meta, ua: navigator.userAgent })
+      });
+      const data = await res.json().catch(()=>({}));
+      if(res.ok && data && data.ok!==false){ show('Đăng ký thành công. Cảm ơn bạn!', 'ok'); zaloEl.value=''; }
+      else{ show('Gửi thất bại. Vui lòng thử lại sau.', 'err'); }
+    }catch(_){ show('Lỗi mạng. Thử lại sau.', 'err'); }
+    finally{ btn.disabled = false; }
+  });
+})();
+</script>
+</body></html>
